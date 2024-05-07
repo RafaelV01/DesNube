@@ -31,14 +31,14 @@ import {
     loginBtn.addEventListener("click", loginWithInputs);
     loginGoogleBtn.addEventListener("click", () => {
       signInPopup(googleProvider).then(() => {
-        window.location.href = "../templates/home.html";
+        window.location.href = "./templates/home.html";
       }).catch(error => {
         console.error("Error during Google sign-in:", error);
       });
     });
     loginFacebookBtn.addEventListener("click", () => {
       signInPopup(facebookProvider).then(() => {
-        window.location.href = "../templates/home.html";
+        window.location.href = "./templates/home.html";
       }).catch(error => {
         console.error("Error during Facebook sign-in:", error);
       });
