@@ -27,7 +27,7 @@ import {
       });
   }
   
-  document.addEventListener("DOMContentLoaded", () => {
+ /* document.addEventListener("DOMContentLoaded", () => {
     loginBtn.addEventListener("click", loginWithInputs);
     loginGoogleBtn.addEventListener("click", () => {
       signInPopup(googleProvider).then(() => {
@@ -43,4 +43,17 @@ import {
         console.error("Error during Facebook sign-in:", error);
       });
     });
+  });*/
+document.addEventListener("DOMContentLoaded", () => {
+    loginBtn.addEventListener("click", loginWithInputs);
+    loginGoogleBtn.addEventListener("click", () => {
+      signInPopup(googleProvider).then(() => {
+        window.location.href = "./templates/home.html";
+      });
+    });
+    loginFacebookBtn.addEventListener("click", () =>
+      signInPopup(facebookProvider).then(() => {
+        window.location.href = "./templates/home.html";
+      })
+    );
   });
