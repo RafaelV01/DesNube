@@ -48,3 +48,4 @@ export const loginWithFacebook = async (email, password) =>createUserWithEmailAn
 export const onAuthChanged = (user) => onAuthStateChanged(auth, user);
 
 export const deleteCurrentUser = async () => auth.currentUser.delete();
+
